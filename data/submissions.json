@@ -1,5 +1,89 @@
 [
   {
+    "id": "2db8eb8d-1bd6-4523-a0dc-06855a4b4bc8",
+    "createdAt": "2026-05-07T06:57:59.824Z",
+    "selectedSymptomIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      11,
+      12,
+      13,
+      14
+    ],
+    "selectedSymptoms": [
+      "记忆力下降",
+      "思维断电",
+      "反应迟钝",
+      "嗜睡",
+      "多梦",
+      "头晕",
+      "头面油腻",
+      "脱发",
+      "头发稀少",
+      "易打哈欠"
+    ],
+    "scores": [
+      {
+        "name": "血脂",
+        "hits": 10,
+        "total": 54,
+        "percent": 18.5,
+        "rank": 1
+      },
+      {
+        "name": "循环",
+        "hits": 9,
+        "total": 60,
+        "percent": 15,
+        "rank": 2
+      },
+      {
+        "name": "气血",
+        "hits": 9,
+        "total": 63,
+        "percent": 14.3,
+        "rank": 3
+      },
+      {
+        "name": "毒素",
+        "hits": 7,
+        "total": 55,
+        "percent": 12.7,
+        "rank": 4
+      },
+      {
+        "name": "情绪",
+        "hits": 4,
+        "total": 38,
+        "percent": 10.5,
+        "rank": 5
+      },
+      {
+        "name": "寒湿",
+        "hits": 4,
+        "total": 51,
+        "percent": 7.8,
+        "rank": 6
+      },
+      {
+        "name": "免疫",
+        "hits": 2,
+        "total": 39,
+        "percent": 5.1,
+        "rank": 7
+      }
+    ],
+    "topFactors": [
+      "血脂",
+      "循环",
+      "气血"
+    ]
+  },
+  {
     "id": "b3dac9fd-b996-4079-aa27-3627541bc12f",
     "createdAt": "2026-05-07T05:32:27.863Z",
     "selectedSymptomIds": [
