@@ -1,5 +1,191 @@
 [
   {
+    "id": "18ff3dda-aba8-4bef-9b64-1094e82afa62",
+    "createdAt": "2026-05-07T07:54:34.139Z",
+    "selectedSymptomIds": [],
+    "selectedSymptoms": [],
+    "scores": [
+      {
+        "name": "毒素",
+        "hits": 0,
+        "total": 55,
+        "percent": 0,
+        "rank": 1
+      },
+      {
+        "name": "寒湿",
+        "hits": 0,
+        "total": 51,
+        "percent": 0,
+        "rank": 2
+      },
+      {
+        "name": "免疫",
+        "hits": 0,
+        "total": 39,
+        "percent": 0,
+        "rank": 3
+      },
+      {
+        "name": "气血",
+        "hits": 0,
+        "total": 63,
+        "percent": 0,
+        "rank": 4
+      },
+      {
+        "name": "情绪",
+        "hits": 0,
+        "total": 38,
+        "percent": 0,
+        "rank": 5
+      },
+      {
+        "name": "血脂",
+        "hits": 0,
+        "total": 54,
+        "percent": 0,
+        "rank": 6
+      },
+      {
+        "name": "循环",
+        "hits": 0,
+        "total": 60,
+        "percent": 0,
+        "rank": 7
+      }
+    ],
+    "topFactors": [
+      "毒素",
+      "寒湿",
+      "免疫"
+    ]
+  },
+  {
+    "id": "25618b4a-a572-4a5e-ab39-52c579310ba3",
+    "createdAt": "2026-05-07T07:50:33.741Z",
+    "selectedSymptomIds": [],
+    "selectedSymptoms": [],
+    "scores": [
+      {
+        "name": "毒素",
+        "hits": 0,
+        "total": 55,
+        "percent": 0,
+        "rank": 1
+      },
+      {
+        "name": "寒湿",
+        "hits": 0,
+        "total": 51,
+        "percent": 0,
+        "rank": 2
+      },
+      {
+        "name": "免疫",
+        "hits": 0,
+        "total": 39,
+        "percent": 0,
+        "rank": 3
+      },
+      {
+        "name": "气血",
+        "hits": 0,
+        "total": 63,
+        "percent": 0,
+        "rank": 4
+      },
+      {
+        "name": "情绪",
+        "hits": 0,
+        "total": 38,
+        "percent": 0,
+        "rank": 5
+      },
+      {
+        "name": "血脂",
+        "hits": 0,
+        "total": 54,
+        "percent": 0,
+        "rank": 6
+      },
+      {
+        "name": "循环",
+        "hits": 0,
+        "total": 60,
+        "percent": 0,
+        "rank": 7
+      }
+    ],
+    "topFactors": [
+      "毒素",
+      "寒湿",
+      "免疫"
+    ]
+  },
+  {
+    "id": "d2f27c5d-6f31-48db-881f-30588ef1efe1",
+    "createdAt": "2026-05-07T07:48:57.376Z",
+    "selectedSymptomIds": [],
+    "selectedSymptoms": [],
+    "scores": [
+      {
+        "name": "毒素",
+        "hits": 0,
+        "total": 55,
+        "percent": 0,
+        "rank": 1
+      },
+      {
+        "name": "寒湿",
+        "hits": 0,
+        "total": 51,
+        "percent": 0,
+        "rank": 2
+      },
+      {
+        "name": "免疫",
+        "hits": 0,
+        "total": 39,
+        "percent": 0,
+        "rank": 3
+      },
+      {
+        "name": "气血",
+        "hits": 0,
+        "total": 63,
+        "percent": 0,
+        "rank": 4
+      },
+      {
+        "name": "情绪",
+        "hits": 0,
+        "total": 38,
+        "percent": 0,
+        "rank": 5
+      },
+      {
+        "name": "血脂",
+        "hits": 0,
+        "total": 54,
+        "percent": 0,
+        "rank": 6
+      },
+      {
+        "name": "循环",
+        "hits": 0,
+        "total": 60,
+        "percent": 0,
+        "rank": 7
+      }
+    ],
+    "topFactors": [
+      "毒素",
+      "寒湿",
+      "免疫"
+    ]
+  },
+  {
     "id": "2db8eb8d-1bd6-4523-a0dc-06855a4b4bc8",
     "createdAt": "2026-05-07T06:57:59.824Z",
     "selectedSymptomIds": [

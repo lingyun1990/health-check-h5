@@ -53,7 +53,6 @@ export default function EvaluatePage() {
   }, [keyword, pageIndex, steps]);
 
   const currentStep = steps[pageIndex] ?? steps[0];
-  const progress = Math.round(((pageIndex + 1) / steps.length) * 100);
   const isSearching = keyword.trim().length > 0;
 
   function toggleSymptom(id: number) {
@@ -78,55 +77,32 @@ export default function EvaluatePage() {
   }
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-3xl px-3 pb-8 pt-3">
-      <section className="rounded-lg bg-gradient-to-br from-[#225f56] to-[#3b8a77] p-5 text-white shadow-soft">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-sm text-white/78">身体状态轻评估</p>
-            <h1 className="mt-2 text-3xl font-bold leading-tight tracking-normal">勾选最近有过的表现</h1>
-            <p className="mt-3 max-w-sm text-sm leading-6 text-white/78">不用想太久，看到符合自己的表现就点一下。每页 10 项，慢慢填。</p>
+    <main className="mx-auto min-h-screen w-full max-w-md px-3 pb-5 pt-3">
+      <section className="rounded-2xl bg-gradient-to-br from-[#225f56] to-[#3b8a77] p-3 text-white shadow-soft">
+        <h1 className="flex items-center justify-center gap-2 text-[1.45rem] font-bold leading-tight tracking-normal">
+          轻松开始
+          <span className="relative grid h-7 w-7 place-items-center rounded-full bg-[#ffd76a] text-[#5a3b16] shadow-sm">
+            <span className="absolute left-[7px] top-[8px] h-1.5 w-1.5 rounded-full bg-[#5a3b16]" />
+            <span className="absolute right-[7px] top-[8px] h-1.5 w-1.5 rounded-full bg-[#5a3b16]" />
+            <span className="absolute bottom-[6px] left-1/2 h-3 w-4 -translate-x-1/2 rounded-b-full border-b-[3px] border-[#5a3b16]" />
+          </span>
+        </h1>
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <div className="rounded-xl border border-white/20 bg-white/14 p-2.5 backdrop-blur">
+            <p className="text-sm font-bold leading-5 text-[#ffe28a]">省时省钱省力</p>
+            <p className="mt-1 text-[11px] leading-4 text-white/72">帮您省去不必要的检查费用</p>
           </div>
-          <div className="grid h-20 w-20 shrink-0 place-items-center rounded-full border border-white/30 bg-white/15 text-center backdrop-blur">
-            <div>
-              <p className="text-xl font-bold">{selectedIds.length}/95</p>
-              <p className="text-xs text-white/76">已选择</p>
-            </div>
+          <div className="rounded-xl border border-white/20 bg-white/14 p-2.5 backdrop-blur">
+            <p className="text-sm font-bold leading-5 text-[#ffe28a]">精准恢复方向</p>
+            <p className="mt-1 text-[11px] leading-4 text-white/72">快速帮您找到精准恢复方向</p>
           </div>
         </div>
       </section>
 
-      <header className="sticky top-0 z-10 mt-3 rounded-lg border border-line bg-[#fffdf9]/95 p-4 shadow-[0_8px_24px_rgba(44,34,23,0.08)] backdrop-blur">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-sm text-ink/52">{isSearching ? "搜索结果" : `第 ${pageIndex + 1} 步 / 共 ${steps.length} 步`}</p>
-            <h2 className="mt-1 text-xl font-bold text-ink">{isSearching ? "按关键词筛选症状" : currentStep.title}</h2>
-          </div>
-          <span className="shrink-0 rounded-full bg-mint px-3 py-1 text-sm font-semibold text-leaf">
-            {isSearching ? `${filteredSymptoms.length} 项` : `${currentStep.start}-${currentStep.end} 项`}
-          </span>
-        </div>
-        <div className="mt-4 h-2 overflow-hidden rounded-full bg-[#eee7dd]">
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-leaf to-[#c86b4a] transition-all"
-            style={{ width: `${isSearching ? 100 : progress}%` }}
-          />
-        </div>
-        <input
-          value={keyword}
-          onChange={(event) => setKeyword(event.target.value)}
-          placeholder="搜索症状，例如：头疼、胃胀"
-          className="mt-4 h-11 w-full rounded-lg border border-line bg-white px-4 text-base outline-none focus:border-leaf focus:ring-4 focus:ring-leaf/15"
-        />
-        <div className="mt-3 flex justify-between text-sm text-ink/52">
-          <span>已选 {selectedIds.length} 项</span>
-          <span>{isSearching ? `匹配 ${filteredSymptoms.length} 项` : `共 ${symptoms.length} 项`}</span>
-        </div>
-      </header>
-
-      <section className="mt-3 overflow-hidden rounded-lg border border-line bg-[#fffdf9]">
-        <div className="grid gap-2 p-3">
+      <section className="mt-2 overflow-hidden rounded-2xl border border-line bg-[#fffdf9]">
+        <div className="grid grid-cols-2 gap-2 p-2">
           {filteredSymptoms.length === 0 ? (
-            <div className="rounded-lg border border-dashed border-line bg-[#fbf8f1] p-5 text-center text-sm text-ink/56">
+            <div className="col-span-2 rounded-xl border border-dashed border-line bg-[#fbf8f1] p-5 text-center text-sm text-ink/56">
               没有找到相关症状，可以换个关键词试试。
             </div>
           ) : null}
@@ -138,21 +114,18 @@ export default function EvaluatePage() {
               key={symptom.id}
               type="button"
               onClick={() => toggleSymptom(symptom.id)}
-              className={`flex min-h-[58px] items-center justify-between gap-3 rounded-lg border px-4 py-3 text-left transition ${
+              className={`flex min-h-[48px] items-center justify-between gap-2 rounded-xl border px-3 py-2 text-left transition ${
                 checked
                   ? "border-leaf bg-mint text-[#103a35] shadow-[inset_0_0_0_1px_#2d6a4f]"
                   : "border-line bg-white text-ink active:bg-[#fbf8f1]"
               }`}
             >
-              <span className="min-w-0">
-                <span className="text-sm text-ink/48">{symptom.id}.</span>{" "}
-                <strong className="text-base font-semibold">{symptom.name}</strong>
-                <span className={`mt-1 block text-xs ${checked ? "text-leaf" : "text-ink/45"}`}>
-                  {getCategory(symptom.id)}
-                </span>
+              <span className="flex min-w-0 items-center gap-1.5">
+                <span className="shrink-0 text-xs text-ink/42">{symptom.id}.</span>
+                <strong className="truncate text-[15px] font-semibold leading-5">{symptom.name}</strong>
               </span>
               <span
-                className={`shrink-0 rounded-full px-3 py-1 text-sm font-semibold ${
+                className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${
                   checked ? "bg-white text-leaf" : "bg-[#fbf8f1] text-ink/45"
                 }`}
               >
@@ -164,12 +137,12 @@ export default function EvaluatePage() {
         </div>
       </section>
 
-      <section className="mt-3 grid grid-cols-2 gap-3 rounded-lg border border-line bg-[#fffdf9] p-3">
+      <section className="mt-2 grid grid-cols-2 gap-3 rounded-2xl border border-line bg-[#fffdf9] p-3">
         <button
           type="button"
           onClick={() => setPageIndex((value) => Math.max(0, value - 1))}
           disabled={isSearching || pageIndex === 0}
-          className="h-11 rounded-lg border border-line bg-white text-sm font-semibold text-leaf disabled:cursor-not-allowed disabled:opacity-45"
+          className="h-11 rounded-xl border border-line bg-white text-sm font-semibold text-leaf disabled:cursor-not-allowed disabled:opacity-45"
         >
           上一页
         </button>
@@ -184,22 +157,12 @@ export default function EvaluatePage() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           disabled={isSubmitting || isSearching}
-          className="h-11 rounded-lg bg-leaf text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+          className="h-11 rounded-xl bg-leaf text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pageIndex >= steps.length - 1 ? (isSubmitting ? "正在生成..." : "生成结果") : "下一页"}
         </button>
       </section>
 
-      <div className="mt-4 pb-4">
-        <button
-          type="button"
-          onClick={submitAssessment}
-          disabled={isSubmitting}
-          className="flex h-12 w-full items-center justify-center rounded-lg border border-leaf/25 bg-white px-5 text-base font-semibold text-leaf shadow-sm disabled:opacity-60"
-        >
-          {isSubmitting ? "正在生成..." : "直接生成结果"}
-        </button>
-      </div>
     </main>
   );
 }

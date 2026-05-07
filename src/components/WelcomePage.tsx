@@ -9,10 +9,12 @@ export default function WelcomePage() {
 
           <div className="relative z-20 mb-[-1.35rem] w-[min(20rem,92vw)] rounded-[26px] border border-[#eadfca] bg-white/88 px-5 py-4 text-center shadow-[0_18px_38px_rgba(134,88,31,0.13)] backdrop-blur motion-safe:animate-bubble-in">
             <p className="text-[20px] font-semibold leading-8 tracking-normal text-[#2b261f]">
-              我是凌云老师的助理，您好鸭
+              我是凌云老师的助理
             </p>
             <p className="mt-1 text-[19px] font-semibold leading-8 tracking-normal text-leaf">
-              由我带您完成这次身体自检
+              您好鸭
+              <br />
+              由我带您轻松完成身体自检
             </p>
           </div>
 
