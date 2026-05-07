@@ -1,0 +1,142 @@
+[
+  {
+    "id": "b3dac9fd-b996-4079-aa27-3627541bc12f",
+    "createdAt": "2026-05-07T05:32:27.863Z",
+    "selectedSymptomIds": [
+      12,
+      13,
+      14
+    ],
+    "selectedSymptoms": [
+      "脱发",
+      "头发稀少",
+      "易打哈欠"
+    ],
+    "scores": [
+      {
+        "name": "血脂",
+        "hits": 3,
+        "total": 54,
+        "percent": 5.6,
+        "rank": 1
+      },
+      {
+        "name": "情绪",
+        "hits": 2,
+        "total": 38,
+        "percent": 5.3,
+        "rank": 2
+      },
+      {
+        "name": "循环",
+        "hits": 3,
+        "total": 60,
+        "percent": 5,
+        "rank": 3
+      },
+      {
+        "name": "气血",
+        "hits": 3,
+        "total": 63,
+        "percent": 4.8,
+        "rank": 4
+      },
+      {
+        "name": "免疫",
+        "hits": 1,
+        "total": 39,
+        "percent": 2.6,
+        "rank": 5
+      },
+      {
+        "name": "寒湿",
+        "hits": 1,
+        "total": 51,
+        "percent": 2,
+        "rank": 6
+      },
+      {
+        "name": "毒素",
+        "hits": 1,
+        "total": 55,
+        "percent": 1.8,
+        "rank": 7
+      }
+    ],
+    "topFactors": [
+      "血脂",
+      "情绪",
+      "循环"
+    ]
+  },
+  {
+    "id": "dc529139-86cb-447f-8d92-07da8d789d38",
+    "createdAt": "2026-05-07T03:53:56.921Z",
+    "selectedSymptomIds": [
+      4,
+      6,
+      8
+    ],
+    "selectedSymptoms": [
+      "嗜睡",
+      "头晕",
+      "头麻"
+    ],
+    "scores": [
+      {
+        "name": "血脂",
+        "hits": 3,
+        "total": 54,
+        "percent": 5.6,
+        "rank": 1
+      },
+      {
+        "name": "毒素",
+        "hits": 3,
+        "total": 55,
+        "percent": 5.5,
+        "rank": 2
+      },
+      {
+        "name": "情绪",
+        "hits": 2,
+        "total": 38,
+        "percent": 5.3,
+        "rank": 3
+      },
+      {
+        "name": "循环",
+        "hits": 3,
+        "total": 60,
+        "percent": 5,
+        "rank": 4
+      },
+      {
+        "name": "气血",
+        "hits": 3,
+        "total": 63,
+        "percent": 4.8,
+        "rank": 5
+      },
+      {
+        "name": "寒湿",
+        "hits": 2,
+        "total": 51,
+        "percent": 3.9,
+        "rank": 6
+      },
+      {
+        "name": "免疫",
+        "hits": 1,
+        "total": 39,
+        "percent": 2.6,
+        "rank": 7
+      }
+    ],
+    "topFactors": [
+      "血脂",
+      "毒素",
+      "情绪"
+    ]
+  }
+]
